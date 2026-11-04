@@ -1,0 +1,64 @@
+# The document library: the only knowledge the chatbot may use.
+# Managed in the app by policy owners who are document editors (Documents area).
+# kind: pdf   -> text is extracted from the PDF and split into passages by heading
+# kind: table -> a hand-curated CSV (one passage per row), used where PDF text
+#                extraction scrambles a table layout
+
+documents:
+- id: nrcot
+  kind: pdf
+  file: raw/National_Rail_Conditions_of_Travel_2025.pdf
+  title: National Rail Conditions of Travel
+  short: Conditions of Travel
+  version: Version 6, applies from 23 November 2025
+  credit: © Rail Settlement Plan Ltd 2025
+  section_style: condition
+  skip_pages:
+  - 1
+  - 2
+  pages: 34
+  updated: '2026-11-04T18:05:23+00:00'
+  updated_by: initial document set
+  bundled: true
+- id: atp
+  kind: pdf
+  file: raw/Accessible_Travel_Policy.pdf
+  title: Accessible Travel Policy
+  short: Accessible Travel Policy
+  version: Valid from April 2026
+  credit: Govia Thameslink Railway (GTR)
+  section_style: heading
+  skip_pages:
+  - 1
+  - 2
+  pages: 40
+  updated: '2026-11-04T18:05:23+00:00'
+  updated_by: initial document set
+  bundled: true
+- id: mra
+  kind: pdf
+  file: raw/Making_Rail_Accessible.pdf
+  title: Making Rail Accessible – Helping older and disabled passengers
+  short: Making Rail Accessible
+  version: Valid from April 2026
+  credit: Govia Thameslink Railway (GTR)
+  section_style: heading
+  skip_pages:
+  - 1
+  - 2
+  pages: 30
+  updated: '2026-11-04T18:05:23+00:00'
+  updated_by: initial document set
+  bundled: true
+- id: fleet
+  kind: table
+  file: curated/fleet_accessibility.csv
+  source_pdf: raw/Fleet_accessibility_information.pdf
+  title: Fleet Accessibility Information
+  short: Fleet Accessibility
+  version: April 2026
+  credit: Govia Thameslink Railway (GTR)
+  pages: 1
+  updated: '2026-11-04T18:05:23+00:00'
+  updated_by: initial document set
+  bundled: true
